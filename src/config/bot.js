@@ -30,16 +30,6 @@ export const botConfig = {
     ],
   },
 
-  client.on('messageCreate', async (message) => {
-    if (message.author.id !== '339015343475523584) return; // Admin check
-
-    if (message.content.startsWith('!say ')) {
-        const text = message.content.slice(5);
-        const channel = client.channels.cache.get('1281283153742401608');
-        if (channel) await channel.send(text);
-    }
-});
-
   // =========================
   // COMMAND BEHAVIOR
   // =========================
